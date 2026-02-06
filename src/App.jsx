@@ -1,49 +1,16 @@
-import Button from 'react-bootstrap/Button';
+{/*import Button from 'react-bootstrap/Button';
 import Badge from 'react-bootstrap/Badge';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import OptionsHeader from './components/OptionsHeader';
-import OptionsBlock from './components/OptionsBlock';
-import Header from './components/Header';
+import OptionsHeader from './components/layout/Filters/OptionsHeader';
+import OptionsBlock from './components/layout/Filters/OptionsBlock';
+import Header from './components/layout/Header/Header';
+import ListCard from './components/object/ListCard';
+import ObjectPage from './pages/ObjectPage/ObjectPage';
 
 export function App() {
-  const objects = [
-    {
-      nameOKN: 'Главный дом усадьбы Сорокиных',
-      addres: 'Калужская область, Мосальский район, дер. Чертень, д. 7а',
-      type: 'Памятник',
-      square: '403.9',
-      conditional: 'Неудовлетворительно',
-      badgeOKN: 'выставлен на торги'
-    },
-        {
-      nameOKN: 'Главный дом усадьбы Сорокиных',
-      addres: 'Калужская область, Мосальский район, дер. Чертень, д. 7а',
-      type: 'Памятник',
-      square: '403.9',
-      conditional: 'Неудовлетворительно',
-      badgeOKN: 'выставлен на торги'
-    },
-        {
-      nameOKN: 'Главный дом усадьбы Сорокиных',
-      addres: 'Калужская область, Мосальский район, дер. Чертень, д. 7а',
-      type: 'Памятник',
-      square: '403.9',
-      conditional: 'Неудовлетворительно',
-      badgeOKN: 'выставлен на торги'
-    },
-        {
-      nameOKN: 'Главный дом усадьбы Сорокиных',
-      addres: 'Калужская область, Мосальский район, дер. Чертень, д. 7а',
-      type: 'Памятник',
-      square: '403.9',
-      conditional: 'Неудовлетворительно',
-      badgeOKN: 'выставлен на торги'
-    }
-  ];
-
   return (
     <Container>
       <Row>
@@ -56,60 +23,39 @@ export function App() {
         </Col>
         <Col lg={9}>
           <OptionsHeader />
-          <Container className="List">
-            <Row>
-              {objects.map((object, index) => (
-                <Col key={index} xs={12} md={6} lg={4} className="ListItem">
-                  <Card style={{ width: '100%' }}>
-
-                    <Card.Img 
-                      variant="top" 
-                      src="https://via.placeholder.com/286x180" 
-                      alt='фото объекта ОКН'
-                    />
-                
-                    <Container>
-
-                    </Container>
-                    <Card.Body>
-                      <Badge bg="warning" className="mb-2">
-                        {object.badgeOKN}
-                      </Badge>
-                      
-                      <Card.Title>{object.nameOKN}</Card.Title>
-                      <Card.Text>{object.addres}</Card.Text>
-                      
-                      <Container className="p-0">
-                        <Row className="text-center">
-                          <Col xs={4} className="border-end">
-                            <small className="text-muted d-block">Тип</small>
-                            <strong>{object.type}</strong>
-                          </Col>
-                          <Col xs={4} className="border-end">
-                            <small className="text-muted d-block">Площадь</small>
-                            <strong>{object.square} м²</strong>
-                          </Col>
-                          <Col xs={4}>
-                            <small className="text-muted d-block">Состояние</small>
-                            <strong className={object.conditional === 'Неудовлетворительно' ? 'text-danger' : 'text-success'}>
-                              {object.conditional}
-                            </strong>
-                          </Col>
-                        </Row>
-                      </Container>
-                      
-                      <div className="d-grid gap-2 mt-3">
-                        <Button variant="outline-primary">Подробнее</Button>
-                      </div>
-                    </Card.Body>
-                  </Card>
-                </Col>
-              ))}
-            </Row>s
-          </Container>
+          <ListCard />
         </Col>
+
+        Это у нас инфа о товаре - <ObjectPage />
       </Row>
 
     </Container>
   );
 }
+*/}
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/layout/Header/Header';
+import CatalogPage from './pages/CatalogPage/CatalogPage';
+import ObjectPage from './pages/ObjectPage/ObjectPage';
+import InvestorPage from './pages/InvestorPage/InvestorPage';
+import MapPage from './pages/MapPage/MapPage';
+import HomePage from './pages/HomePage/HomePage';
+
+function App() {
+  return(
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<CatalogPage />} />
+        <Route path="/catalog" element={<CatalogPage />} />
+        <Route path="/investor" element={<InvestorPage />} />
+        <Route path="/object/:id" element={<ObjectPage />} />
+        <Route path='/map' element={<MapPage />} />
+        <Route path='/home' element={<HomePage />} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;
