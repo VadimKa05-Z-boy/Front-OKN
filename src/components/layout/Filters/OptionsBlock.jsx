@@ -74,7 +74,7 @@ const OptionsBlock = () => {
           />
         </div>
       </Form.Group>
-      <Button className="w-100 mb-3" variant='warning'>Показать объектов</Button>
+      <Button className="w-100 mb-3 text-white" variant='warning'>Показать объектов</Button>
       <Button className="w-100 mb-3" variant="outline-secondary">Очистить</Button>
     </div>
   );

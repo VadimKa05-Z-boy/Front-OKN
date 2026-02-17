@@ -39,7 +39,7 @@ const CustomFooter = () =>{
                         <div md={6}>
                             <Button
                                 href="tel:+7(4842)713852"
-                                variant="primary" 
+                                variant="warning" 
                             >
                                 <i className="bi bi-telephone me-2"></i>
                                 +7(4842) 71 38 52
