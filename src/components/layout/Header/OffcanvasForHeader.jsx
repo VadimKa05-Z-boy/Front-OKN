@@ -26,7 +26,6 @@ const OffcanvasForHeader = () => {
             <Nav.Link as={Link} to="/catalog" onClick={handleClose}>Каталог</Nav.Link>
             <Nav.Link as={Link} to="/map" onClick={handleClose}>Карта</Nav.Link>
             <Nav.Link as={Link} to="/investor" onClick={handleClose}>Инвестору</Nav.Link>
-            <Nav.Link as={Link} to="/" onClick={handleClose}>Контакты</Nav.Link>
           </Nav>
         </Offcanvas.Body>
       </Offcanvas>

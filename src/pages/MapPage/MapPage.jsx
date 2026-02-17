@@ -9,8 +9,7 @@ import Col from 'react-bootstrap/Col';
 const MapPage = () =>{
     return(
         <Container className="py-4">
-            <OptionsHeader />
-            <Row>
+            <Row className="min-vh-100">
                 <Col lg={3} className="mb-4 mb-lg-0">
                     <OptionsBlock />
                 </Col>

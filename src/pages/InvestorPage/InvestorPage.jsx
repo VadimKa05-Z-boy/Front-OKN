@@ -2,11 +2,13 @@ import Button from "react-bootstrap/esm/Button"
 import OptionsHeader from "../../components/layout/Filters/OptionsHeader"
 import CustomAccordion from "../../components/object/CustomAccordion"
 import { Link } from "react-router-dom"
-import Container from "react-bootstrap/Container";  // ← ДОБАВЬ
-import Row from "react-bootstrap/Row";              // ← ДОБАВЬ  
-import Col from "react-bootstrap/Col";              // ← ДОБАВЬ
-import Card from "react-bootstrap/Card";            // ← ДОБАВЬ
+import Container from "react-bootstrap/Container";  
+import Row from "react-bootstrap/Row";              
+import Col from "react-bootstrap/Col";              
+import Card from "react-bootstrap/Card";            
 import CustomFooter from "../../components/layout/Footer/Footer";
+import Boss from '../../assets/imageBos.png'
+
 
 
 const InvestorPage = () =>{
@@ -81,10 +83,9 @@ const InvestorPage = () =>{
 
     return(
         <Container className="py-4">
-            <OptionsHeader />
-            <Row className="mt-1 mb-5">
-                <Card>
-                    <Card.Img variant="left" src="/" sm={4} />
+            <Row className="mt-1 mb-5 min-vh-100">
+                <Card >
+                    <Card.Img variant="left" src={Boss} sm={4} />
                     <Card.Body sm={8}>
                         <blockquote className="blockquote mb-0">
                             <p>Культурное наследие имеет огромное воспитательное значение. Укрепляет национальное самосознание народа. Помогает каждому человеку ощутить сопричастность с великой культурой своей страны. В государственный реестр объектов культурного наследия внесено около 700 памятников истории и культуры нашей области. Мы ведем планомерную работу по их сохранению! </p>

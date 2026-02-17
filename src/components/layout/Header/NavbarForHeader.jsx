@@ -16,18 +16,18 @@ const NavbarForHeader = () => {
     <>
       <Nav variant='underline' className="justify-content-end">
         <Nav.Item>
-          <Nav.Link as={Link} to="/home">Главная</Nav.Link>
+          <Nav.Link as={Link} to="/home" className="text-dark fw-semibold">Главная</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link as={Link} to="/catalog">Каталог</Nav.Link>
+          <Nav.Link as={Link} to="/catalog" className="text-dark fw-semibold">Каталог</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link as={Link} to="/map">Карта</Nav.Link>
+          <Nav.Link as={Link} to="/map" className="text-dark fw-semibold">Карта</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link as={Link} to="/investor">Инвестору</Nav.Link>
+          <Nav.Link as={Link} to="/investor" className="text-dark fw-semibold">Инвестору</Nav.Link>
         </Nav.Item>
-        <Button variant="outline-primary" onClick={handleShow} className="ms-3">
+        <Button variant="outline-warning" onClick={handleShow} className="ms-3">
           <FaEnvelope className="me-2" />
           Обратная связь
         </Button>

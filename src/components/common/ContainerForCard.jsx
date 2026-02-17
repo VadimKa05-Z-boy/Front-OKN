@@ -17,8 +17,23 @@ const ContainerForCard = (props) => {
     conditional,
   } = props;
 
+  const getConditionClass = (cond) => {
+    switch(cond) {
+      case 'Аварийное':
+      case 'Неудовлетворительно':
+        return 'text-danger';
+      case 'Удовлетворительное':
+        return 'text-warning';
+      case 'Хорошее':
+      case 'Востановленное':
+        return 'text-success';
+      default:
+        return 'text-secondary';
+    }
+  }
+
   return(
-    <Card.Body>
+    <Card.Body className='bg-dark text-white rounded-3'>
       <Badge bg="warning" className="mb-2">
         {badgeOKN}
       </Badge>
@@ -27,18 +42,18 @@ const ContainerForCard = (props) => {
       <Card.Text>{addres}</Card.Text>
       
       <Container className="p-0">
-        <Row className="text-center">
-          <Col xs={4} className="border-end">
-            <small className="text-muted d-block">Тип</small>
+        <Row className="">
+          <Col xs={12} >
+            <small className="d-block">Тип</small>
             <strong>{type}</strong>
           </Col>
-          <Col xs={4} className="border-end">
-            <small className="text-muted d-block">Площадь</small>
+          <Col xs={12}>
+            <small className=" d-block">Площадь</small>
             <strong>{square} м²</strong>
           </Col>
-          <Col xs={4}>
-            <small className="text-muted d-block">Состояние</small>
-            <strong className={conditional === 'Неудовлетворительно' ? 'text-danger' : 'text-success'}>
+          <Col xs={12}>
+            <small className=" d-block">Состояние</small>
+            <strong >
               {conditional}
             </strong>
           </Col>
@@ -47,7 +62,7 @@ const ContainerForCard = (props) => {
       
       <div className="d-grid gap-2 mt-3">
         <Link to={`/object/${id}`}>
-          <Button variant="outline-primary">Подробнее</Button>
+          <Button variant="outline-warning">Подробнее</Button>
         </Link>
       </div>
     </Card.Body>

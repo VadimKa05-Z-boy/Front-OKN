@@ -3,6 +3,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import NavbarForHeader from "./NavbarForHeader";
 import OffcanvasForHeader from "./OffcanvasForHeader";
+import LogoKaluga from "../../../assets/LogoKaluga.svg";
 
 const Header = () => {
   return(
@@ -11,12 +12,12 @@ const Header = () => {
         <Col lg={4}>
           <div className="d-flex align-items-center">
             <img 
-              src="https://via.placeholder.com/50x50" 
+              src={LogoKaluga} 
               alt="Логотип ОКН" 
               className="me-2"
-              style={{ width: '50px', height: '50px' }}
+              style={{ width: '40px', height: '50px' }}
             />
-            <h4 className="mb-0">Объекты культурного наследия</h4>
+            <h4 className="mb-0">Объекты<br />культурного наследия</h4>
           </div>
         </Col>
         <Col lg={6} className="d-none d-lg-block">

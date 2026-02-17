@@ -1,8 +1,9 @@
 import Form from 'react-bootstrap/Form';
+import { Button } from 'react-bootstrap';
 
 const OptionsBlock = () => {
   return(
-    <div className="bg-light p-3 rounded">
+    <div className="bg-light p-3 rounded border border-warning border-3">
       <Form.Group className="mb-3">
         <Form.Label>Вид объекта</Form.Label>
         <Form.Select aria-label="Tipe Object">
@@ -73,6 +74,8 @@ const OptionsBlock = () => {
           />
         </div>
       </Form.Group>
+      <Button className="w-100 mb-3" variant='warning'>Показать объектов</Button>
+      <Button className="w-100 mb-3" variant="outline-secondary">Очистить</Button>
     </div>
   );
 };

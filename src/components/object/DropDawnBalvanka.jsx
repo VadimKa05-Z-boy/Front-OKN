@@ -7,19 +7,19 @@ const DropDownBalvanka = (props) => {
     } = props
 
     return(
-        <>
-            <Form.Group className="mb-3">
-                <Form.Label>{titel}</Form.Label>
-                <Form.Select aria-label={titel}>
+        <div>
+            <Form.Group >
+                <Form.Label className='mb-1 fw-bold'>{titel}</Form.Label>
+                <Form.Select aria-label={titel} >
                     <option value="{titel}" disabled selected></option>
                     {lists.map((item,index) =>(
-                        <option key={index} value={item}>
+                        <option key={index} value={item} >
                             {item}
                         </option>
                      ))}
                 </Form.Select>
             </Form.Group>
-        </>
+        </div >
 
     )
 }

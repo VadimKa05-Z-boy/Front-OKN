@@ -9,14 +9,13 @@ import SearchBlock from "../../components/object/SearchBlock";
 
 const HomePage = () =>{
     return(
-        <Container className="py-4">
-            <OptionsHeader />
-            <div>
+        <div>
+            <div className="min-vh-100">
                 <SearchBlock />
             </div>
             <div></div>
             <CustomFooter />
-        </Container>
+        </div>
     )
 }
 

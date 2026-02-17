@@ -7,12 +7,13 @@ import ListCard from '../../components/object/ListCard';
 import { objects } from '../../data/objects';
 import CustomFooter from "../../components/layout/Footer/Footer";
 
+
 const CatalogPage = () => {
   return(
     <Container className="py-4">
       <OptionsHeader />
-      <Row>
-        <Col lg={3} className="mb-4 mb-lg-0">
+      <Row className='min-vh-100'>
+        <Col lg={3} className="mb-4 d-none d-lg-block">
           <OptionsBlock />
         </Col>
         <Col lg={9}>
