@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { Link } from 'react-router-dom';
 
 const OptionsHeader = () => {
   return(
@@ -20,7 +21,7 @@ const OptionsHeader = () => {
         </Col>
         <Col xs={6} sm={3} lg={2}>
           <Button variant="outline-primary" className="d-lg-none w-100 mb-2">Фильтры</Button>
-          <Button variant="outline-secondary" className="w-100">На карте</Button>
+          <Button variant="outline-secondary" className="w-100" as={Link} to="/map">На карте</Button>
         </Col>
       </Row>
     </Container>

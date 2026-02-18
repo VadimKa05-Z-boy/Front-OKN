@@ -157,7 +157,7 @@ const SearchBlock = ({})=>{
                     <dir className='bg-dark text-white p-5 rounded-4 d-flex flex-column align-items-center'>
                         <h2 className='mb-4'>Карта домов старой Калуги</h2>
                         <p className='mb-4 text-center'>Используйте интерактивную карту для поиска объектов по районам.<br /> Фильтры помогут найти здания, подходящие под ваши критерии.</p>
-                        <Button variant='warning'>Открыть карту</Button>
+                        <Button variant='outline-warning'>Открыть карту</Button>
                     </dir>
                 </div>                 
             </div>
