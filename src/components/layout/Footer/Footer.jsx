@@ -13,7 +13,7 @@ const CustomFooter = () =>{
                         <div md={6}>
                             <Button
                                 href="https://www.kaluga-gov.ru/"
-                                variant="primary"
+                                variant="outline-warning"
                             >
                                 <i className="bi bi-telegram me-2"></i>
                                 kaluga-gov.ru
@@ -26,7 +26,7 @@ const CustomFooter = () =>{
                         <div md={6}>
                             <Button
                                 href="https://nasledie.admoblkaluga.ru/"
-                                variant="primary"
+                                variant="outline-warning"
                             >
                                 <i className="bi bi-telegram me-2"></i>
                                 nasledie.admoblkaluga.ru
@@ -39,7 +39,7 @@ const CustomFooter = () =>{
                         <div md={6}>
                             <Button
                                 href="tel:+7(4842)713852"
-                                variant="warning" 
+                                variant="outline-warning" 
                             >
                                 <i className="bi bi-telephone me-2"></i>
                                 +7(4842) 71 38 52

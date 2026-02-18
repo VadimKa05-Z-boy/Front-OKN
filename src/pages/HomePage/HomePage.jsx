@@ -13,7 +13,6 @@ const HomePage = () =>{
             <div className="min-vh-100">
                 <SearchBlock />
             </div>
-            <div></div>
             <CustomFooter />
         </div>
     )

@@ -12,10 +12,10 @@ const CustomAccordion = (props) =>{
     } = props;
 
     return (
-        <Accordion>
+        <Accordion >
             {data.map((item, index) => (
-                <Accordion.Item key={getKey(item, index)} eventKey={getKey(item, index)}>
-                    <Accordion.Header>
+                <Accordion.Item key={getKey(item, index)} eventKey={getKey(item, index)} className='bg-warning text-white'>
+                    <Accordion.Header className="bg-warning text-white">
                         {renderHeader ? renderHeader(item, index) : item.title}
                     </Accordion.Header>
                     <Accordion.Body>
@@ -25,7 +25,6 @@ const CustomAccordion = (props) =>{
                                     {item.content}
                                 </div>
                                 
-                                {/* Кнопка (если есть) */}
                                 {renderButton ? renderButton(item, index) : (
                                     item.button && (
                                         <div className={buttonPosition === 'right' ? 'flex-shrink-0' : ''}>
@@ -33,7 +32,7 @@ const CustomAccordion = (props) =>{
                                                 variant={item.button.variant || "primary"}
                                                 href={item.button.url}
                                                 target="_blank"
-                                                className="w-100"
+                                                className="w-100 bg-dark text-white rounded-4"
                                             >
                                                 {item.button.text}
                                             </Button>
